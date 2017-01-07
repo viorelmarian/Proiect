@@ -1,4 +1,6 @@
 #include<iostream>
+#include<windows.h>
+#include <stdlib.h>
 using namespace std;
 
 void banner(int x)
@@ -43,10 +45,6 @@ void banner(int x)
     mat[9][33]=mat[9][36]=mat[9][39]=mat[9][40]=mat[9][41]=mat[9][43]=mat[9][44]=mat[9][45]=mat[9][51]=mat[9][54]=32;
 
 
-
-
-
-
     for(i=0;i<13;i++)
     {
         for(j=0;j<60;j++)
@@ -55,8 +53,59 @@ void banner(int x)
     }
 }
 
+void gotoxy(int x,int y)
+{
+    COORD p={x,y};
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),p);
+}
+
+void menu(int x)
+{
+    int i, unit=0;
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti tipul de conversie din lista de mai jos:       "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           1. Arie           8.  Procentaj                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           2. Denistate      9.  Putere                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           3. Energie        10. Temperatura              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           4. Forta          11. Timp                     "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           5. Lungime        12. Valuta                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           6. Masa           13. Viteza                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"           7. Presiune       14. Volum                    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti tipul de conversie:                        "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(39, 25);
+    cin>>unit;
+
+}
+
 int main()
 {
     int x;
     banner(x);
+    menu(x);
+    system("cls");
 }
