@@ -177,17 +177,11 @@ long double arie(int &x)
     rez=cant/v[y]*v[z];
     return rez;
 }
-int main()
+
+ long double densitate(int &x)
 {
-    int x,i;
-    banner(x);
-    menu(x);
-    system("cls");
-    while(x==1)
-    {
-        banner(x);
-        cout<<arie(x);
-        gotoxy(0,32);
+    int i,y,z;
+    long double cant;
 
     cout<<(char)(-55);
     for(i=0;i<58;i++)
@@ -196,28 +190,88 @@ int main()
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"      Conversie noua: [1]                                 "<<(char)(-70);
-    cout<<endl;
-    cout<<(char)(-70);cout<<"      Revenire la meniul principal: [2]                   "<<(char)(-70);
-    cout<<endl;
-    cout<<(char)(-70);cout<<"      Iesire: [0]                                         "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"      Optiune:                                            "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   1. grame/centimetru cub       8.  Kilograme/metru cub  "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   2. grame/litru                9.  Pounds/cubic foot    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   3. grame/metru cub            10. Pounds/cubic inch    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   4. grame/mililitru            11. miligrame/cm cub     "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   5. grame/milimetru cub        12. miligrame/litru      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   6. kilograme/centimetru cub   13. miligrame/metru cub  "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   7. kilograme/litru            14. tone/metru cub       "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
     cout<<endl;
 
     cout<<(char)(-56);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
     cout<<(char)(-68);
+    gotoxy(50,25);
+    cin>>y;
+    gotoxy(49,27);
+    cin>>z;
+    gotoxy(28,29);
+    cin>>cant;
+    gotoxy(15,31);
 
-    gotoxy(15,38);
-    cin>>x;
+
+    long double v[14],rez;
+    v[1]=0.001;
+    v[2]=1.0;
+    v[3]=1000.0;
+    v[4]=0.001;
+    v[5]=0.000001;
+    v[6]=0.000001;
+    v[7]=0.001;
+    v[8]=1;
+    v[9]=0.062427960841;
+    v[10]=0.000036127292153;
+    v[11]=1.0;
+    v[12]=1000.0;
+    v[13]=1000000.0;
+    v[14]=0.001;
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
+
+int main()
+{
+    int x,i;
+    banner(x);
+    menu(x);
     system("cls");
+    if(x==2)
+    {
+        banner(x);
+        cout<<densitate(x);
+        gotoxy(0,33);
     }
+
+
 
 
 }
