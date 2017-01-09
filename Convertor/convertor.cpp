@@ -59,7 +59,7 @@ void gotoxy(int x,int y)
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),p);
 }
 
-void menu(int x)
+void menu(int &x)
 {
     int i, unit=0;
     cout<<(char)(-55);
@@ -93,19 +93,131 @@ void menu(int x)
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
+
     cout<<(char)(-56);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
     cout<<(char)(-68);
-    gotoxy(39, 25);
-    cin>>unit;
+    gotoxy(36, 25);
 
+    cin>>x;
 }
 
+long double arie(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      1. Milimetri patrati     7.  Kilometri patrati      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      2. Centimetri patrati    8.  Acre                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      3. Decimetri patrati     9.  Square foot            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      4. Metri patrati         10. Square inch            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      5. Decametri patrati     11. Square yard            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      6. Hectometri patrati                               "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,24);
+    cin>>y;
+    gotoxy(49,26);
+    cin>>z;
+    gotoxy(28,28);
+    cin>>cant;
+    gotoxy(15,30);
+
+
+    long double v[11],rez;
+    v[1]=1000000.0;
+    v[2]=10000.0;
+    v[3]=100.0;
+    v[4]=1.0;
+    v[5]=0.01;
+    v[6]=0.0001;
+    v[7]=0.000001;
+    v[8]=0.00024710538147;
+    v[9]=10.763910417;
+    v[10]=1550.0031;
+    v[11]=1.1959900463;
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
 int main()
 {
-    int x;
+    int x,i;
     banner(x);
     menu(x);
     system("cls");
+    while(x==1)
+    {
+        banner(x);
+        cout<<arie(x);
+        gotoxy(0,32);
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Conversie noua: [1]                                 "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Revenire la meniul principal: [2]                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Iesire: [0]                                         "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Optiune:                                            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+
+    gotoxy(15,38);
+    cin>>x;
+    system("cls");
+    }
+
+
 }
