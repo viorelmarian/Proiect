@@ -630,6 +630,77 @@ long double presiune(int &x)
     rez=cant/v[y]*v[z];
     return rez;
 }
+
+long double putere(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             1. Cai Putere                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             2. Cheval Vapeur                             "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             3. Horse Power                               "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             4. Kilowatti                                 "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             5. Pferdestarke (PS)                         "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             6. Watti                                     "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,24);
+    cin>>y;
+    gotoxy(49,26);
+    cin>>z;
+    gotoxy(28,28);
+    cin>>cant;
+    gotoxy(15,30);
+
+
+    long double v[6],rez;
+    v[1]=1.3596216173;
+    v[2]=1.3596216173;
+    v[3]=1.3410220924;
+    v[4]=1;
+    v[5]=1.3596216173;
+    v[6]=1000;
+
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
 int main()
 {
     int x,i;
@@ -673,6 +744,12 @@ int main()
     {
         banner(x);
         cout<<presiune(x);
+        gotoxy(0,33);
+    }
+    if(x==8)
+    {
+        banner(x);
+        cout<<putere(x);
         gotoxy(0,33);
     }
 
