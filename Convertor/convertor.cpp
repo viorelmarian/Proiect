@@ -406,6 +406,81 @@ long double forta(int &x)
     return rez;
 }
 
+long double lungime(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       1. Milimetri            7.  Kilometri              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       2. Centimetri           8.  Feet                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       3. Decimetri            9.  Inches                 "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       4. Metri                10. Mile                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       5. Decametri            11. Yards                  "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       6. Hectometri                                      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,24);
+    cin>>y;
+    gotoxy(49,26);
+    cin>>z;
+    gotoxy(28,28);
+    cin>>cant;
+    gotoxy(15,30);
+
+
+    long double v[11],rez;
+    v[1]=1000;
+    v[2]=100;
+    v[3]=10;
+    v[4]=1;
+    v[5]=0.1;
+    v[6]=0.01;
+    v[7]=0.001;
+    v[8]=3.280839895;
+    v[9]=39.37007874;
+    v[10]=0.00062137119224;
+    v[11]=1.0936132983;
+
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
 int main()
 {
     int x,i;
@@ -431,6 +506,12 @@ int main()
     {
         banner(x);
         cout<<forta(x);
+        gotoxy(0,33);
+    }
+    if(x==5)
+    {
+        banner(x);
+        cout<<lungime(x);
         gotoxy(0,33);
     }
 
