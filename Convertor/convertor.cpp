@@ -801,6 +801,43 @@ long double temperatura(int &x)
             return cant;
     }
 }
+
+long double procentaj(int &x)
+{
+    long double cant,proc,i;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             Introduceti numarul:                         "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             Introduceti procentul (%):                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             Rezultat:                                    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(35,15);
+    cin>>cant;
+    gotoxy(41,17);
+    cin>>proc;
+    gotoxy(24,19);
+    return cant*proc/100;
+}
+
 int main()
 {
     int x,i=0;
@@ -846,21 +883,23 @@ int main()
         cout<<presiune(x);
         gotoxy(0,33);
     }
+    if(x==8)
+    {
+        banner(x);
+        cout<<procentaj(x);
+        gotoxy(0,33);
+    }
     if(x==9)
     {
         banner(x);
         cout<<putere(x);
         gotoxy(0,33);
     }
-    while(i==0)
-    {if(x==10)
+    if(x==10)
     {
         banner(x);
         cout<<temperatura(x);
         gotoxy(0,33);
-
-    }cin>>i;
-    system("cls");
     }
 
 
