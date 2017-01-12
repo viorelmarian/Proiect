@@ -337,6 +337,75 @@ long double energie(int &x)
     rez=cant/v[y]*v[z];
     return rez;
 }
+
+long double forta(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             1. Dyne                                      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             2. Kilograme forta                           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             3. Kilopond                                  "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             4. Pound-force                               "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             5. Newtoni                                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,23);
+    cin>>y;
+    gotoxy(49,25);
+    cin>>z;
+    gotoxy(28,27);
+    cin>>cant;
+    gotoxy(15,29);
+
+
+    long double v[6],rez;
+    v[1]=100000;
+    v[2]=0.1019716213;
+    v[3]=0.1019716213;
+    v[4]=0.22480894387;
+    v[5]=1;
+
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
+
 int main()
 {
     int x,i;
@@ -357,6 +426,11 @@ int main()
     {
         banner(x);
         cout<<energie(x);
+        gotoxy(0,33);
+    }if(x==4)
+    {
+        banner(x);
+        cout<<forta(x);
         gotoxy(0,33);
     }
 
