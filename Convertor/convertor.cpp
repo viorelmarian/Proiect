@@ -701,9 +701,109 @@ long double putere(int &x)
     rez=cant/v[y]*v[z];
     return rez;
 }
+
+long double temperatura(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             1. Grade Celsius                             "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             2. Grade Fahrenheit                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             3. Grade Rankine                             "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"             4. Grade Kelvin                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,22);
+    cin>>y;
+    gotoxy(49,24);
+    cin>>z;
+    gotoxy(28,26);
+    cin>>cant;
+    gotoxy(15,28);
+
+
+    if(y==1)
+    {
+        if(z==1)
+            return cant;
+        if(z==2)
+            return cant*1.8+32;
+        if(z==3)
+            return (cant+273.15)*1.8;
+        if(z==4)
+            return cant+273.15;
+    }
+    if(y==2)
+    {
+        if(z==1)
+            return (cant-32)/1.8;
+        if(z==2)
+            return cant;
+        if(z==3)
+            return cant+459.67;
+        if(z==4)
+            return (cant+459.67)/1.8;
+    }
+    if(y==3)
+    {
+        if(z==1)
+            return (cant-491.67)/1.8;
+        if(z==2)
+            return cant-459.67;
+        if(z==3)
+            return cant;
+        if(z==4)
+            return cant/1.8;
+    }
+    if(y==4)
+    {
+        if(z==1)
+            return cant-273.15;
+        if(z==2)
+            return cant*1.8-459.67;
+        if(z==3)
+            return cant*1.8;
+        if(z==4)
+            return cant;
+    }
+}
 int main()
 {
-    int x,i;
+    int x,i=0;
     banner(x);
     menu(x);
     system("cls");
@@ -746,11 +846,21 @@ int main()
         cout<<presiune(x);
         gotoxy(0,33);
     }
-    if(x==8)
+    if(x==9)
     {
         banner(x);
         cout<<putere(x);
         gotoxy(0,33);
+    }
+    while(i==0)
+    {if(x==10)
+    {
+        banner(x);
+        cout<<temperatura(x);
+        gotoxy(0,33);
+
+    }cin>>i;
+    system("cls");
     }
 
 
