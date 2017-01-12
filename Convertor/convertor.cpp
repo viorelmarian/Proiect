@@ -258,16 +258,105 @@ long double arie(int &x)
     return rez;
 }
 
+long double energie(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   1. British Thermal Units    8.  Kilojoule              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   2. Erg                      9.  Kilowatt-ora           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   3. Calorie                  10. Tona de carbune        "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   4. Picior-funt forta        11. Tona de combustibil    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   5. Tol-funt forta           12. Tona petrol            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   6. Kilogram-metru           13. Watt-ora               "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   7. Kilocalorie              14. Joule                  "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,25);
+    cin>>y;
+    gotoxy(49,27);
+    cin>>z;
+    gotoxy(28,29);
+    cin>>cant;
+    gotoxy(15,31);
+
+
+    long double v[14],rez;
+    v[1]=0.00094781707775;
+    v[2]=10000000;
+    v[3]=0.23884589663;
+    v[4]=0.73756217557;
+    v[5]=8.8507461068;
+    v[6]=0.1019716213;
+    v[7]=0.00023884589663 ;
+    v[8]=0.001;
+    v[9]=2.7777777778e-7;
+    v[10]=3.4120842375e-11 ;
+    v[11]=3.4120842375e-11 ;
+    v[12]=2.3884589663e-11;
+    v[13]=0.00027777777778;
+    v[14]=1;
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
 int main()
 {
     int x,i;
     banner(x);
     menu(x);
     system("cls");
-    if(x==2)
+    if(x==1)
+    {
+        banner(x);
+        cout<<arie(x);
+        gotoxy(0,33);
+    }if(x==2)
     {
         banner(x);
         cout<<densitate(x);
+        gotoxy(0,33);
+    }if(x==3)
+    {
+        banner(x);
+        cout<<energie(x);
         gotoxy(0,33);
     }
 
