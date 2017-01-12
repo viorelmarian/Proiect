@@ -481,6 +481,79 @@ long double lungime(int &x)
     rez=cant/v[y]*v[z];
     return rez;
 }
+
+long double masa(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       1. Miligrame            6.  Hectograme             "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       2. Centigrame           7.  Kilograme              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       3. Decigrame            8.  Pounds                 "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       4. Grame                9. Tone                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"       5. Decagrame                                       "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,23);
+    cin>>y;
+    gotoxy(49,25);
+    cin>>z;
+    gotoxy(28,27);
+    cin>>cant;
+    gotoxy(15,29);
+
+
+    long double v[10],rez;
+    v[1]=1000;
+    v[2]=100;
+    v[3]=10;
+    v[4]=1;
+    v[5]=0.1;
+    v[6]=0.01;
+    v[7]=0.001;
+    v[8]=0.0022046226218;
+    v[9]=0.000001;
+
+
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
 int main()
 {
     int x,i;
@@ -512,6 +585,12 @@ int main()
     {
         banner(x);
         cout<<lungime(x);
+        gotoxy(0,33);
+    }
+    if(x==6)
+    {
+        banner(x);
+        cout<<masa(x);
         gotoxy(0,33);
     }
 
