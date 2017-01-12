@@ -498,13 +498,13 @@ long double masa(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"       1. Miligrame            6.  Hectograme             "<<(char)(-70);
+    cout<<(char)(-70);cout<<"       1. Miligrame            6. Hectograme              "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"       2. Centigrame           7.  Kilograme              "<<(char)(-70);
+    cout<<(char)(-70);cout<<"       2. Centigrame           7. Kilograme               "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"       3. Decigrame            8.  Pounds                 "<<(char)(-70);
+    cout<<(char)(-70);cout<<"       3. Decigrame            8. Pounds                  "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"       4. Grame                9. Tone                   "<<(char)(-70);
+    cout<<(char)(-70);cout<<"       4. Grame                9. Tone                    "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"       5. Decagrame                                       "<<(char)(-70);
     cout<<endl;
@@ -554,6 +554,82 @@ long double masa(int &x)
     rez=cant/v[y]*v[z];
     return rez;
 }
+
+long double presiune(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  1. Atmosfere                   7.  Pound/Square foot    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  2. Bari                        8.  Mm coloana de apa    "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  3. Inch coloana de apa         9.  Mm coloana de mercur "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  4. Inch coloana de mercur      10. Pascali              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  5. Kilopond/centimetru patrat  11. PSI                  "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  6. Kilopascali                 12. Torri                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,24);
+    cin>>y;
+    gotoxy(49,26);
+    cin>>z;
+    gotoxy(28,28);
+    cin>>cant;
+    gotoxy(15,30);
+
+
+    long double v[13],rez;
+    v[1]=0.0000098692316931;
+    v[2]=0.00001;
+    v[3]=0.0040146307867;
+    v[4]=0.00029529983071;
+    v[5]=0.00001019716213;
+    v[6]=0.001;
+    v[7]=0.020885434273;
+    v[8]=0.1019716213;
+    v[9]=0.007500615613;
+    v[10]=1;
+    v[11]=0.00014503773801;
+    v[12]=0.0075006167382;
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
 int main()
 {
     int x,i;
@@ -593,7 +669,12 @@ int main()
         cout<<masa(x);
         gotoxy(0,33);
     }
-
+    if(x==7)
+    {
+        banner(x);
+        cout<<presiune(x);
+        gotoxy(0,33);
+    }
 
 
 
