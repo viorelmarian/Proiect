@@ -82,11 +82,11 @@ void menu(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"           4. Forta          11. Timp                     "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"           5. Lungime        12. Valuta                   "<<(char)(-70);
+    cout<<(char)(-70);cout<<"           5. Lungime        12. Volum                    "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"           6. Masa           13. Viteza                   "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"           7. Presiune       14. Volum                    "<<(char)(-70);
+    cout<<(char)(-70);cout<<"           7. Presiune                                    "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
@@ -1050,6 +1050,85 @@ long double viteza(int &x)
     return rez;
 }
 
+long double volum(int &x)
+{
+    int i,y,z;
+    long double cant;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  1. Mililitri              7.  Centimetri cubi           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  2. Centilitri             8.  Decimetri cubi            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  3. Decilitri              9.  Metri cubi                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  4. Litri                  10. Cubic Inches              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  5. Gallon(UK)             11. Cubic Feet                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"  6. Galoon(US)             12. Cubic Yards               "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+    gotoxy(50,24);
+    cin>>y;
+    gotoxy(49,26);
+    cin>>z;
+    gotoxy(28,28);
+    cin>>cant;
+    gotoxy(15,30);
+
+
+    long double v[13],rez;
+    v[1]=1000;
+    v[2]=100;
+    v[3]=10;
+    v[4]=1;
+    v[5]=0.2199692483;
+    v[6]=0.26417205236;
+    v[7]=1000;
+    v[8]=1;
+    v[9]=0.001;
+    v[10]=61.023744095 ;
+    v[11]=0.035314666721;
+    v[12]=0.0013079506193;
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
+
+
 int main()
 {
     int x,i=0;
@@ -1125,6 +1204,12 @@ int main()
     {
         banner(x);
         cout<<timp(x);
+        gotoxy(0,33);
+    }
+    if(x==12)
+    {
+        banner(x);
+        cout<<volum(x);
         gotoxy(0,33);
     }
     if(x==13)
