@@ -103,6 +103,44 @@ void menu(int &x)
     cin>>x;
 }
 
+void revenire(int &x)
+{
+   int i, unit=0;
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Pentru conversie noua: [1]                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Pentru a reveni la meniul principal: [2]            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Pentru a iesi din program: [3]                      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"      Optiune:                                            "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+
+    gotoxy(16,30);
+    cin>>x;
+    system("cls");
+
+}
+
 long double arie(int &x)
 {
     int i,y,z;
@@ -146,6 +184,8 @@ long double arie(int &x)
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
 
     cout<<(char)(-56);
@@ -223,6 +263,8 @@ long double arie(int &x)
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
 
     cout<<(char)(-56);
@@ -304,6 +346,8 @@ long double energie(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
     cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
 
     cout<<(char)(-56);
     for(i=0;i<58;i++)
@@ -380,6 +424,8 @@ long double forta(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
     cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
 
     cout<<(char)(-56);
     for(i=0;i<58;i++)
@@ -449,6 +495,8 @@ long double lungime(int &x)
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
 
     cout<<(char)(-56);
@@ -524,6 +572,8 @@ long double masa(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
     cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
 
     cout<<(char)(-56);
     for(i=0;i<58;i++)
@@ -598,6 +648,8 @@ long double presiune(int &x)
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
 
     cout<<(char)(-56);
@@ -675,6 +727,8 @@ long double putere(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
     cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
 
     cout<<(char)(-56);
     for(i=0;i<58;i++)
@@ -741,6 +795,8 @@ long double temperatura(int &x)
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
 
     cout<<(char)(-56);
@@ -838,9 +894,82 @@ long double procentaj(int &x)
     return cant*proc/100;
 }
 
+long double timp(int &x)
+{
+    long double cant;
+    int i,z,y;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         1. Milisecunde    5. Zile                        "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         2. Secunde        6. Saptamani                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         3. Minute         7. Luni                        "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         4. Ore            8. Ani                         "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+
+    gotoxy(50,22);
+    cin>>y;
+    gotoxy(49,24);
+    cin>>z;
+    gotoxy(28,26);
+    cin>>cant;
+    gotoxy(15,28);
+
+
+    long double v[9],rez;
+    v[1]=60000;
+    v[2]=60;
+    v[3]=1;
+    v[4]=0.016666666666666666;
+    v[5]=0.0006944444444444445;
+    v[6]=0.0000992063492063492;
+    v[7]=0.000022831050228310503;
+    v[8]=0.000001902587519025875;
+
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
+
 int main()
 {
     int x,i=0;
+    meniu:
     banner(x);
     menu(x);
     system("cls");
@@ -884,10 +1013,17 @@ int main()
         gotoxy(0,33);
     }
     if(x==8)
-    {
+    {   proc:
         banner(x);
         cout<<procentaj(x);
-        gotoxy(0,33);
+        gotoxy(0,22);
+        revenire(x);
+        if(x==1)
+            goto proc;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==9)
     {
@@ -901,7 +1037,13 @@ int main()
         cout<<temperatura(x);
         gotoxy(0,33);
     }
+    if(x==11)
+    {
+        banner(x);
+        cout<<timp(x);
+        gotoxy(0,33);
+    }
 
-
-
+    sfarsit:
+    return 0;
 }
