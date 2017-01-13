@@ -104,7 +104,7 @@ void menu(int &x)
     cin>>x;
 }
 
-void revenire(int &x)
+void revenire(int &x,int &poz)
 {
    int i, unit=0;
     cout<<(char)(-55);
@@ -114,19 +114,19 @@ void revenire(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"      Pentru conversie noua: [1]                          "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   Pentru conversie noua: [1]                             "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"      Pentru a reveni la meniul principal: [2]            "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   Pentru a reveni la meniul principal: [2]               "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"      Pentru a iesi din program: [3]                      "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   Pentru a iesi din program: [3]                         "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"      Optiune:                                            "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   Optiune:                                               "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
@@ -135,18 +135,19 @@ void revenire(int &x)
     for(i=0;i<58;i++)
         cout<<(char)(-51);
     cout<<(char)(-68);
-
-    gotoxy(16,30);
+    gotoxy(13, poz+11);
     cin>>x;
     system("cls");
 
 }
 
-long double arie(int &x)
+long double arie(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    arie:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -200,9 +201,10 @@ long double arie(int &x)
     gotoxy(28,28);
     cin>>cant;
     gotoxy(15,30);
-
-
-    long double v[11],rez;
+    poz=30;
+    if(y<1||z<1||y>11||z>11)
+        goto arie;
+    long double v[12],rez;
     v[1]=1000000.0;
     v[2]=10000.0;
     v[3]=100.0;
@@ -219,11 +221,13 @@ long double arie(int &x)
     return rez;
 }
 
- long double densitate(int &x)
+ long double densitate(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    densitate:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -235,19 +239,19 @@ long double arie(int &x)
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   1. grame/centimetru cub       8.  Kilograme/metru cub  "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   1. Grame/centimetru cub       8.  Kilograme/metru cub  "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   2. grame/litru                9.  Pounds/cubic foot    "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   2. Grame/litru                9.  Pounds/cubic foot    "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   3. grame/metru cub            10. Pounds/cubic inch    "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   3. Grame/metru cub            10. Pounds/cubic inch    "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   4. grame/mililitru            11. miligrame/cm cub     "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   4. Grame/mililitru            11. Miligrame/cm cub     "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   5. grame/milimetru cub        12. miligrame/litru      "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   5. Grame/milimetru cub        12. Miligrame/litru      "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   6. kilograme/centimetru cub   13. miligrame/metru cub  "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   6. Kilograme/centimetru cub   13. Miligrame/metru cub  "<<(char)(-70);
     cout<<endl;
-    cout<<(char)(-70);cout<<"   7. kilograme/litru            14. tone/metru cub       "<<(char)(-70);
+    cout<<(char)(-70);cout<<"   7. Kilograme/litru            14. Tone/metru cub       "<<(char)(-70);
     cout<<endl;
     cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
     cout<<endl;
@@ -279,9 +283,11 @@ long double arie(int &x)
     gotoxy(28,29);
     cin>>cant;
     gotoxy(15,31);
+    poz=31;
+    if(y<0||z<0||y>14||z>14)
+        goto densitate;
 
-
-    long double v[14],rez;
+    long double v[15],rez;
     v[1]=0.001;
     v[2]=1.0;
     v[3]=1000.0;
@@ -301,10 +307,13 @@ long double arie(int &x)
     return rez;
 }
 
-long double energie(int &x)
+long double energie(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
+    energie:
+    system("cls");
+    banner(x);
 
     cout<<(char)(-55);
     for(i=0;i<58;i++)
@@ -361,9 +370,11 @@ long double energie(int &x)
     gotoxy(28,29);
     cin>>cant;
     gotoxy(15,31);
+    poz=31;
+    if(y<0||z<0||y>14||z>14)
+        goto energie;
 
-
-    long double v[14],rez;
+    long double v[15],rez;
     v[1]=0.00094781707775;
     v[2]=10000000;
     v[3]=0.23884589663;
@@ -383,11 +394,13 @@ long double energie(int &x)
     return rez;
 }
 
-long double forta(int &x)
+long double forta(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    forta:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -439,8 +452,9 @@ long double forta(int &x)
     gotoxy(28,27);
     cin>>cant;
     gotoxy(15,29);
-
-
+    poz=29;
+    if(y<0||z<0||y>5||z>5)
+        goto forta;
     long double v[6],rez;
     v[1]=100000;
     v[2]=0.1019716213;
@@ -453,11 +467,13 @@ long double forta(int &x)
     return rez;
 }
 
-long double lungime(int &x)
+long double lungime(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    lungime:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -511,9 +527,10 @@ long double lungime(int &x)
     gotoxy(28,28);
     cin>>cant;
     gotoxy(15,30);
-
-
-    long double v[11],rez;
+    poz=30;
+    if(y<0||z<0||y>11||z>11)
+        goto lungime;
+    long double v[12],rez;
     v[1]=1000;
     v[2]=100;
     v[3]=10;
@@ -531,11 +548,13 @@ long double lungime(int &x)
     return rez;
 }
 
-long double masa(int &x)
+long double masa(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    masa:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -587,7 +606,9 @@ long double masa(int &x)
     gotoxy(28,27);
     cin>>cant;
     gotoxy(15,29);
-
+    poz=29;
+    if(y<0||z<0||y>9||z>9)
+        goto masa;
 
     long double v[10],rez;
     v[1]=1000;
@@ -606,11 +627,13 @@ long double masa(int &x)
     return rez;
 }
 
-long double presiune(int &x)
+long double presiune(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    presiune:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -664,7 +687,9 @@ long double presiune(int &x)
     gotoxy(28,28);
     cin>>cant;
     gotoxy(15,30);
-
+    poz=30;
+    if(y<0||z<0||y>12||z>12)
+        goto presiune;
 
     long double v[13],rez;
     v[1]=0.0000098692316931;
@@ -684,11 +709,13 @@ long double presiune(int &x)
     return rez;
 }
 
-long double putere(int &x)
+long double putere(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    putere:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -742,9 +769,10 @@ long double putere(int &x)
     gotoxy(28,28);
     cin>>cant;
     gotoxy(15,30);
-
-
-    long double v[6],rez;
+    poz=30;
+    if(y<0||z<0||y>6||z>6)
+        goto putere;
+    long double v[7],rez;
     v[1]=1.3596216173;
     v[2]=1.3596216173;
     v[3]=1.3410220924;
@@ -757,11 +785,13 @@ long double putere(int &x)
     return rez;
 }
 
-long double temperatura(int &x)
+long double temperatura(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    temperatura:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -811,7 +841,10 @@ long double temperatura(int &x)
     gotoxy(28,26);
     cin>>cant;
     gotoxy(15,28);
+    poz=28;
 
+    if(y<0||z<0||y>4||z>4)
+        goto temperatura;
 
     if(y==1)
     {
@@ -859,10 +892,11 @@ long double temperatura(int &x)
     }
 }
 
-long double procentaj(int &x)
+long double procentaj(int &x, int &poz)
 {
     long double cant,proc,i;
-
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -892,14 +926,17 @@ long double procentaj(int &x)
     gotoxy(41,17);
     cin>>proc;
     gotoxy(24,19);
+    poz=19;
     return cant*proc/100;
 }
 
-long double timp(int &x)
+long double timp(int &x, int &poz)
 {
     long double cant;
     int i,z,y;
-
+    timp:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -950,7 +987,10 @@ long double timp(int &x)
     gotoxy(28,26);
     cin>>cant;
     gotoxy(15,28);
+    poz=28;
 
+    if(y<0||z<0||y>8||z>8)
+        goto timp;
 
     long double v[9],rez;
     v[1]=60000;
@@ -967,11 +1007,13 @@ long double timp(int &x)
     return rez;
 }
 
-long double viteza(int &x)
+long double viteza(int &x, int &poz)
 {
     long double cant;
     int i,z,y;
-
+    viteza:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -1028,7 +1070,9 @@ long double viteza(int &x)
     gotoxy(28,29);
     cin>>cant;
     gotoxy(15,31);
-
+    poz=31;
+    if(y<0||z<0||y>14||z>14)
+        goto viteza;
 
     long double v[15],rez;
     v[1]=100;
@@ -1050,11 +1094,13 @@ long double viteza(int &x)
     return rez;
 }
 
-long double volum(int &x)
+long double volum(int &x, int &poz)
 {
     int i,y,z;
     long double cant;
-
+    volum:
+    system("cls");
+    banner(x);
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -1108,7 +1154,9 @@ long double volum(int &x)
     gotoxy(28,28);
     cin>>cant;
     gotoxy(15,30);
-
+    poz=30;
+    if(y<0||z<0||y>12||z>12)
+        goto volum;
 
     long double v[13],rez;
     v[1]=1000;
@@ -1131,58 +1179,109 @@ long double volum(int &x)
 
 int main()
 {
-    int x,i=0;
+    int x,i=0,poz;
     meniu:
     banner(x);
     menu(x);
-    system("cls");
     if(x==1)
     {
-        banner(x);
-        cout<<arie(x);
-        gotoxy(0,33);
-    }if(x==2)
+        arie:
+        cout<<arie(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto arie;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
+    }
+    if(x==2)
     {
-        banner(x);
-        cout<<densitate(x);
-        gotoxy(0,33);
-    }if(x==3)
+        densitate:
+        cout<<densitate(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto densitate;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
+    }
+    if(x==3)
     {
-        banner(x);
-        cout<<energie(x);
-        gotoxy(0,33);
-    }if(x==4)
+        energie:
+        cout<<energie(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto energie;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
+    }
+    if(x==4)
     {
-        banner(x);
-        cout<<forta(x);
-        gotoxy(0,33);
+        forta:
+        cout<<forta(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto forta;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==5)
     {
-        banner(x);
-        cout<<lungime(x);
-        gotoxy(0,33);
+        lungime:
+        cout<<lungime(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto lungime;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==6)
     {
-        banner(x);
-        cout<<masa(x);
-        gotoxy(0,33);
+        masa:
+        cout<<masa(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto masa;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==7)
     {
-        banner(x);
-        cout<<presiune(x);
-        gotoxy(0,33);
+        presiune:
+        cout<<presiune(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto presiune;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==8)
-    {   proc:
-        banner(x);
-        cout<<procentaj(x);
-        gotoxy(0,22);
-        revenire(x);
+    {
+        procentaj:
+        cout<<procentaj(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
         if(x==1)
-            goto proc;
+            goto procentaj;
         if(x==2)
             goto meniu;
         if(x==3)
@@ -1190,33 +1289,68 @@ int main()
     }
     if(x==9)
     {
-        banner(x);
-        cout<<putere(x);
-        gotoxy(0,33);
+        putere:
+        cout<<putere(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto putere;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==10)
     {
-        banner(x);
-        cout<<temperatura(x);
-        gotoxy(0,33);
+        temperatura:
+        cout<<temperatura(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto temperatura;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==11)
     {
-        banner(x);
-        cout<<timp(x);
-        gotoxy(0,33);
+        timp:
+        cout<<timp(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto timp;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==12)
     {
-        banner(x);
-        cout<<volum(x);
-        gotoxy(0,33);
+        volum:
+        cout<<volum(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto volum;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
     if(x==13)
     {
-        banner(x);
-        cout<<viteza(x);
-        gotoxy(0,33);
+        viteza:
+        cout<<viteza(x,poz);
+        gotoxy(0,poz+3);
+        revenire(x,poz);
+        if(x==1)
+            goto viteza;
+        if(x==2)
+            goto meniu;
+        if(x==3)
+            goto sfarsit;
     }
 
     sfarsit:
