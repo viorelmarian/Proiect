@@ -1,7 +1,7 @@
 #include<iostream>
 #include<windows.h>
 #include <stdlib.h>
-#include<iomanip>
+#include <stdio.h>
 using namespace std;
 
 void banner(int x)
@@ -52,6 +52,23 @@ void banner(int x)
             cout<<mat[i][j];
         cout<<endl;
     }
+}
+
+void SetWindow(int Width, int Height)
+{
+    _COORD coord;
+    coord.X = Width;
+    coord.Y = Height;
+
+    _SMALL_RECT Rect;
+    Rect.Top = 0;
+    Rect.Left = 0;
+    Rect.Bottom = Height - 1;
+    Rect.Right = Width - 1;
+
+    HANDLE Handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleScreenBufferSize(Handle, coord);
+    SetConsoleWindowInfo(Handle, TRUE, &Rect);
 }
 
 void gotoxy(int x,int y)
@@ -107,6 +124,7 @@ void menu(int &x)
 void revenire(int &x,int &poz)
 {
    int i, unit=0;
+
     cout<<(char)(-55);
     for(i=0;i<58;i++)
         cout<<(char)(-51);
@@ -135,8 +153,14 @@ void revenire(int &x,int &poz)
     for(i=0;i<58;i++)
         cout<<(char)(-51);
     cout<<(char)(-68);
+    rev:
     gotoxy(13, poz+11);
     cin>>x;
+    if(x<0||x>3)
+        {
+            gotoxy(13, poz+11);cout<<"     ";
+            goto rev;
+        }
     system("cls");
 
 }
@@ -1180,6 +1204,8 @@ long double volum(int &x, int &poz)
 int main()
 {
     int x,i=0,poz;
+    SetWindow(60,45);
+
     meniu:
     banner(x);
     menu(x);
