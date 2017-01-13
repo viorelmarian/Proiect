@@ -1,6 +1,7 @@
 #include<iostream>
 #include<windows.h>
 #include <stdlib.h>
+#include<iomanip>
 using namespace std;
 
 void banner(int x)
@@ -966,6 +967,89 @@ long double timp(int &x)
     return rez;
 }
 
+long double viteza(int &x)
+{
+    long double cant;
+    int i,z,y;
+
+    cout<<(char)(-55);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-69);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Alegeti unitatile de masura din lista de mai jos:      "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         1. Cm/secunda       8.  Metri/minut              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         2. Cm/minut         9.  Metri/ora                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         3. Cm/ora           10. Km/secunda               "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         4. Feet/secunda     11. Km/minut                 "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         5. Feet/minut       12. Km/ora                   "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         6. Feet/ora         13. Mile/secunda             "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"         7. Metri/secunda    14. Mile/ora                 "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea din care se converteste:          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti unitatea in care se converteste:           "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Introduceti cantitatea:                                "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"   Rezultat:                                              "<<(char)(-70);
+    cout<<endl;
+    cout<<(char)(-70);cout<<"                                                          "<<(char)(-70);
+    cout<<endl;
+
+    cout<<(char)(-56);
+    for(i=0;i<58;i++)
+        cout<<(char)(-51);
+    cout<<(char)(-68);
+
+    gotoxy(50,25);
+    cin>>y;
+    gotoxy(49,27);
+    cin>>z;
+    gotoxy(28,29);
+    cin>>cant;
+    gotoxy(15,31);
+
+
+    long double v[15],rez;
+    v[1]=100;
+    v[2]=6000;
+    v[3]=360000;
+    v[4]=3.2808398950131;
+    v[5]=196.85039370079;
+    v[6]=11811.023622047;
+    v[7]=1;
+    v[8]=60;
+    v[9]=3600;
+    v[10]=0.001;
+    v[11]=0.06;
+    v[12]=3.6;
+    v[13]=0.037282271534;
+    v[14]=2.2369362920544;
+
+    rez=cant/v[y]*v[z];
+    return rez;
+}
+
 int main()
 {
     int x,i=0;
@@ -1041,6 +1125,12 @@ int main()
     {
         banner(x);
         cout<<timp(x);
+        gotoxy(0,33);
+    }
+    if(x==13)
+    {
+        banner(x);
+        cout<<viteza(x);
         gotoxy(0,33);
     }
 
